@@ -16,7 +16,7 @@ More info about Arduino Ciao: [http://labs.arduino.org/ciao](http://labs.arduino
 
 ##Dependencies
 
-* [Linino OS](http://www.linino.org) running on a Arduino / Linino compatible board. More info about the Linino OS installation on a Arduino Yun board can be found [here](http://labs.arduino.org/How+to+upgrade+the+Linino+distribution+for+Arduino+Yun)
+* [Linino OS](http://www.linino.org) running on a Arduino / Linino compatible board. More info about the Linino OS installation on a Arduino YÚN board can be found [here](http://labs.arduino.org/How+to+upgrade+the+Linino+distribution+for+Arduino+Yun)
 * Install Arduino Ciao Core following the instructions [here](http://labs.arduino.org/Ciao+setup)
 * Install the Arduino [Ciao Library](https://github.com/arduino-org/CiaoMCU) on the [Arduino IDE](https://www.arduino.cc/en/Main/Software) / [Arduino Studio](http://labs.arduino.org/tiki-index.php?page=Arduino+Studio)
 * Install the following python module dependencies on the Linino OS:
@@ -51,7 +51,7 @@ For more details check the [official Arduino Ciao webpage](http://labs.arduino.o
 
 1) Login on our [developers website](https://www.muzzley.com/developers) (or create a new account) and open the Apps page.
 
-2) Now click on Create App and give your Muzzley App a name and a description like "Arduino Yun" and "Arduino Yun Muzzley example".
+2) Now click on Create App and give your Muzzley App a name and a description like "Arduino Yun" and "Arduino YÚN Muzzley example".
 
 3) Select the Integration Type as "Cloud to Device" and add a name to the Provider field like "Arduino". It reffers to the manufacturers name that is integrating their products with us.
 
