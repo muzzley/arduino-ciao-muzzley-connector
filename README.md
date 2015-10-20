@@ -42,6 +42,7 @@ More info about Arduino Ciao: [http://labs.arduino.org/ciao](http://labs.arduino
 ```
 cd /usr/lib/python2.7/ciao
 exec python -u ciao.py 2> /var/log/run-ciao.log
+
 ´´´
 
 For more details check the [official Arduino Ciao webpage](http://labs.arduino.org/Ciao).
