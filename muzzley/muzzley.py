@@ -50,10 +50,16 @@ def getHwAddr(ifname):
 
 
 def getIpAddr():
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.connect(("muzzley.com", 80))
-    IP = s.getsockname()[0]
-    s.close()
+    while True:
+       try:
+          s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+          s.connect(("8.8.8.8", 80))
+          IP = s.getsockname()[0]
+          s.close()
+          return IP
+       except:
+          time.sleep(5)
+          pass
     return IP
 
 # function to handle SIGHUP/SIGTERM

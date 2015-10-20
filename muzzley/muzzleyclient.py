@@ -33,7 +33,7 @@ import requests
 import logging
 import json
 import ssl
-
+import time
 
 import muzzleyupnp
 
@@ -178,8 +178,9 @@ class MuzzleyClient():
 		self.handle.on_message = self.on_message
 
 		if "ssl_cert" in muzzley_params:
-			self.logger.debug("Using the following ssl cerificate: %s" % muzzley_params["ssl_cert"])
 			self.handle.tls_set(muzzley_params["ssl_cert"], certfile=None, keyfile=None, cert_reqs=ssl.CERT_REQUIRED, tls_version=ssl.PROTOCOL_TLSv1, ciphers=None)
+			self.logger.debug("Using the following ssl cerificate: %s" % muzzley_params["ssl_cert"])
+
 
 		version = "v1"
 		namespace = "iot"
@@ -187,7 +188,7 @@ class MuzzleyClient():
 		manager_topic = version + self.topic_delimiter + namespace + self.topic_delimiter + "profiles" + \
 						self.topic_delimiter + muzzley_params["profile_id"] + self.topic_delimiter + "channels" + \
 						self.topic_delimiter + muzzley_params["device_key"] + self.topic_delimiter + "#"
-		
+
 		#For debug purposes it can subscribe all messages from the same profile id
 		#manager_topic = version + self.topic_delimiter + namespace + self.topic_delimiter + "profiles" + \
 		#				self.topic_delimiter + muzzley_params["profile_id"] + self.topic_delimiter + "#"
@@ -203,6 +204,7 @@ class MuzzleyClient():
 		#SET authentication params (retrieved from configuration file under muzzley/muzzley.json.conf)
 		if muzzley_params["app_uuid"] and muzzley_params["app_token"]:
 			self.handle.username_pw_set(str(muzzley_params["app_uuid"]), str(muzzley_params["app_token"]))
+			self.logger.debug("Set the app_uuid to: %s and app_token to: %s" % (str(muzzley_params["app_uuid"]), str(muzzley_params["app_token"])))
 
 		#Start UPNP Advertiser
 		self.httpd.start()
@@ -313,10 +315,13 @@ class MuzzleyClient():
 		self.ciao_queue.put(entry)
 
 	def connect(self):
-		if self.handle.connect(self.host, self.port, 60) == 0:
-			self.handle.loop_start()
-			return True
-		return False
+	    while True:
+			try:
+				if self.handle.connect(self.host, self.port, 60) == 0:
+					self.handle.loop_start()
+					return True
+			except:
+				pass
 
 	def disconnect(self):
 		self.httpd.stop()
