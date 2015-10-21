@@ -22,7 +22,8 @@ More info about Arduino Ciao: [http://labs.arduino.org/ciao](http://labs.arduino
 * Install the following python module dependencies on the Linino OS:
     * distribute
     * python-openssl
-    * pip
+    * paho-mqtt
+    * urllib3
     * requests
 
 ##Install the Muzzley connector
