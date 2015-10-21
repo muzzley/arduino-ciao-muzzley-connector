@@ -313,6 +313,7 @@ class MuzzleyClient():
 		}
 
 		self.ciao_queue.put(entry)
+		time.sleep(0.2)
 
 	def connect(self):
 	    while True:
