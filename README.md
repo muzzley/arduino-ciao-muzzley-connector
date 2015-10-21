@@ -41,6 +41,8 @@ More info about Arduino Ciao: [http://labs.arduino.org/ciao](http://labs.arduino
 2) Add the missing **run-ciao** bash script on the **/usr/bin** folder with the following content:
 
 ```
+#!/bin/bash
+
 cd /usr/lib/python2.7/ciao
 exec python -u ciao.py 2> /var/log/run-ciao.log
 
