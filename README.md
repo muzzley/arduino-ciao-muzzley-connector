@@ -215,10 +215,10 @@ void sendMessage(String message) {
   Ciao.write("muzzley", message);
 
   //For example:
-  Ciao.write("muzzley", "plug1/status/true");				//For a Boolean value
-  Ciao.write("muzzley", "temp_sensor1/temperature/23");		//For an Integer 
-  Ciao.write("muzzley", "bulb2/brightness/0.13");			//For a Float
-  Ciao.write("muzzley", "bulb2/color/r_1_g_2_b_3");			//For an Object
+  Ciao.write("muzzley", "plug1|status|true");				//For a Boolean value
+  Ciao.write("muzzley", "temp_sensor1|temperature|23");		//For an Integer 
+  Ciao.write("muzzley", "bulb2|brightness|0.13");			//For a Float
+  Ciao.write("muzzley", "bulb2|color|r_1_g_2_b_3");			//For an Object
 }
 
 ```
@@ -234,10 +234,10 @@ void sendMessageResponse(String id, String message) {
   Ciao.write("muzzley", id, message);
 
   //For example:
-  Ciao.write("muzzley", id, "plug1/status/true");				//For a Boolean value
-  Ciao.write("muzzley", id, "temp_sensor1/temperature/23");		//For an Integer 
-  Ciao.write("muzzley", id, "bulb2/brightness/0.13");			//For a Float
-  Ciao.write("muzzley", id, "bulb2/color/r_1_g_2_b_3");			//For an Object
+  Ciao.write("muzzley", id, "plug1|status|true");				//For a Boolean value
+  Ciao.write("muzzley", id, "temp_sensor1|temperature|23");		//For an Integer 
+  Ciao.write("muzzley", id, "bulb2|brightness|0.13");			//For a Float
+  Ciao.write("muzzley", id, "bulb2|color|r_1_g_2_b_3");			//For an Object
 }
 
 ```
