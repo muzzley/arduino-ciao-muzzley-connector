@@ -139,7 +139,7 @@ Example of a complete configuration file:
 #include <Ciao.h>
 
 void setup() {
-  Ciao.begin(115000);
+  Ciao.begin(250000);
 }
 ```
 
