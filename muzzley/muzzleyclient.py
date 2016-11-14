@@ -289,7 +289,7 @@ class MuzzleyClient():
 		self.logger.debug("Namespace: %s" %namespace)
 		self.logger.debug("Profileid: %s" %profileid)
 		self.logger.debug("Componentid: %s" % componentid)
-		self.logger.debug("Prpertyid: %s" % propertyid)
+		self.logger.debug("Propertyid: %s" % propertyid)
 		self.logger.debug("IO: %s" % io)
 
 		value_delimiter = "_"
