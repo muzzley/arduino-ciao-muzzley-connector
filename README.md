@@ -14,7 +14,7 @@ More info about Arduino Ciao: [http://labs.arduino.org/ciao](http://labs.arduino
 
 # How do I get set up?
 
-##Dependencies
+## Dependencies
 
 * [Linino OS](http://www.linino.org) running on a Arduino / Linino compatible board. More info about the Linino OS installation on a Arduino YÚN board can be found [here](http://labs.arduino.org/How+to+upgrade+the+Linino+distribution+for+Arduino+Yun)
 * Install Arduino Ciao Core following the instructions [here](http://labs.arduino.org/Ciao+setup)
@@ -26,15 +26,15 @@ More info about Arduino Ciao: [http://labs.arduino.org/ciao](http://labs.arduino
     * urllib3
     * requests
 
-##Install the Muzzley connector
+## Install the Muzzley connector
 
-###If the board already has the Ciao core installed, just add the Muzzley connector:
+### If the board already has the Ciao core installed, just add the Muzzley connector:
 
 1) Copy the Muzzley Connector folder to the Arduino Ciao **connectors** folder
 
 2) Copy the Muzzley Connector configuration file to the Arduino Ciao **conf** folder
 
-###If it doesn´t, the ciao core must be also installed in first place:
+### If it doesn´t, the ciao core must be also installed in first place:
 
 1) Get the Ciao core from [here](https://github.com/arduino-org/Ciao) and install it on the **/usr/lib/python2.7/** folder.
 
@@ -50,7 +50,7 @@ exec python -u ciao.py 2> /var/log/run-ciao.log
 
 For more details check the [official Arduino Ciao webpage](http://labs.arduino.org/Ciao).
 
-##Create your Muzzley App
+## Create your Muzzley App
 
 1) Login on our [developers website](https://www.muzzley.com/developers) (or create a new account) and open the Apps page.
 
@@ -71,7 +71,7 @@ For more details check the [official Arduino Ciao webpage](http://labs.arduino.o
 9) Now you will have to create a "profile spec" to specify some characterictics of your product. Please read our documentation on the following [link](http://clients.muzzley.com/documentation#selfcare).
 
 
-##Update your connector configuration file
+## Update your connector configuration file
 
 
 1) Update the Muzzley connector configuration file muzzley.json.conf in the **/etc/muzzley/** folder with the details about your own Muzzley App.
@@ -125,12 +125,12 @@ Example of a complete configuration file:
 }
 ```
 
-##Check the connector log file
+## Check the connector log file
 
 1) The connector log entries are being stored on the file: **/var/log/muzzley.log**
 
 
-##Write your Arduino sketch using the Ciao Library 
+## Write your Arduino sketch using the Ciao Library 
 
 
 1) Include the Arduino Ciao Library and start it on the Setup()
